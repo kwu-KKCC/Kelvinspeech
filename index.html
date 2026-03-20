@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AID Japan × 95% AI — Niseko Conference</title>
+
+  <!-- Reveal.js CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/black.min.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --dark-bg: #0f0f1e;
+      --navy: #16213e;
+      --charcoal: #1a1a2e;
+      --gold: #C9A84C;
+      --white: #ffffff;
+      --light-gray: #f5f5f5;
+    }
+
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+
+    .reveal {
+      background: linear-gradient(135deg, var(--dark-bg) 0%, var(--navy) 100%);
+    }
+
+    .reveal h1, .reveal h2, .reveal h3 {
+      font-family: 'Playfair Display', serif;
+      text-transform: none;
+      color: var(--gold);
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    }
+
+    .reveal p, .reveal li {
+      color: var(--light-gray);
+      font-size: 1.2em;
+      line-height: 1.6;
+    }
+
+    .reveal a {
+      color: var(--gold);
+      text-decoration: underline;
+    }
+
+    /* Section titles */
+    .section-title h2 {
+      font-size: 3.5em;
+      margin: 0;
+    }
+
+    /* Title slide */
+    .title-slide h1 {
+      font-size: 3em;
+      margin-bottom: 0.5em;
+    }
+
+    .title-slide h2 {
+      font-size: 2em;
+      color: var(--white);
+      font-weight: 500;
+    }
+
+    .title-slide p {
+      font-size: 1.3em;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    /* Two column layout */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3em;
+      align-items: center;
+    }
+
+    .two-col h3 {
+      font-size: 1.8em;
+      margin-bottom: 0.5em;
+    }
+
+    .two-col p {
+      font-size: 1.1em;
+    }
+
+    /* Grid layout */
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5em;
+      margin-top: 2em;
+    }
+
+    .grid-3 div {
+      background: rgba(201, 168, 76, 0.1);
+      padding: 1.5em;
+      border-left: 3px solid var(--gold);
+      border-radius: 4px;
+    }
+
+    .grid-3 h4 {
+      color: var(--gold);
+      font-size: 1.2em;
+      margin-bottom: 0.5em;
+    }
+
+    .grid-3 p {
+      font-size: 0.95em;
+    }
+
+    /* Background images */
+    .slide-bg-cover {
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+
+    .slide-bg-cover::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(15, 15, 30, 0.5);
+    }
+
+    .slide-bg-cover .reveal-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Emphasis text */
+    .emphasis {
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .stat {
+      font-size: 2em;
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    /* Padding & spacing */
+    .reveal section {
+      padding: 3em 2em;
+    }
+
+    .reveal h1 + p {
+      margin-top: 1em;
+    }
+
+    /* Reveal.js overrides */
+    .reveal .slide-number {
+      color: var(--gold);
+      font-size: 0.8em;
+    }
+
+    .reveal .progress {
+      background: rgba(201, 168, 76, 0.3);
+    }
+
+    .reveal .progress span {
+      background: var(--gold);
+    }
+  </style>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- SLIDE 1: TITLE -->
+      <section class="title-slide" style="background-image: url('assets/1898-niseko.jpg'); background-size: cover; background-position: center; position: relative;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 15, 30, 0.6); z-index: 0;"></div>
+        <div style="position: relative; z-index: 1;">
+          <h1>AID Japan<br>× 95% AI</h1>
+          <h2>Niseko Conference 2026</h2>
+        </div>
+      </section>
+
+      <!-- SLIDE 2: TWO COMPANIES -->
+      <section style="background-image: linear-gradient(rgba(15, 15, 30, 0.6), rgba(15, 15, 30, 0.6)), url('assets/1898-niseko.jpg'); background-size: cover; background-position: center;">
+        <h2>Two Companies, One Vision</h2>
+        <div class="two-col" style="margin-top: 2.5em;">
+          <div style="text-align: left;">
+            <h3>AID Japan</h3>
+            <p>Luxury real estate, hospitality, and consultancy transforming Niseko into the world's winter sports destination.</p>
+          </div>
+          <div style="text-align: left; border-left: 3px solid var(--gold); padding-left: 2em;">
+            <h3>95% AI</h3>
+            <p>Building the first AI-native economy, where intelligent technology unlocks human experiences instead of replacing them.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 3: AID JAPAN IN NISEKO -->
+      <section style="background-image: linear-gradient(rgba(15, 15, 30, 0.6), rgba(15, 15, 30, 0.6)), url('assets/page-01.png'); background-size: cover; background-position: center;">
+        <h2>AID Japan in Niseko</h2>
+        <div class="grid-3" style="margin-top: 2.5em;">
+          <div>
+            <h4>Real Estate</h4>
+            <p>Premium development projects throughout Niseko, creating luxury properties for global investors.</p>
+          </div>
+          <div>
+            <h4>Hospitality</h4>
+            <p>The 1898 Niseko, Kutchan Station Hotel, authentic Cantonese and Sichuan cuisines, fine dining, and exclusive guest experiences.</p>
+          </div>
+          <div>
+            <h4>Consultancy</h4>
+            <p>Yoteizanka Fudosan and AIDJ Consultancy—development, construction, and expansion services.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 4: THE 1898 NISEKO -->
+      <section style="background-image: linear-gradient(rgba(15, 15, 30, 0.6), rgba(15, 15, 30, 0.6)), url('assets/page-02.png'); background-size: cover; background-position: center;">
+        <h2>The 1898 Niseko</h2>
+        <div class="grid-3" style="margin-top: 2.5em;">
+          <div>
+            <h4>Luxury Suites</h4>
+            <p>6 exclusive suites: Penthouses, Duplexes, Weiss & Moiwa Suites</p>
+          </div>
+          <div>
+            <h4>Amenities</h4>
+            <p>Private in-room onsen, Mount Yotei views, signature butler service, personalized concierge</p>
+          </div>
+          <div>
+            <h4>Experience</h4>
+            <p>Curated breakfast (Eastern & Western), airport transfers, daily shuttle coordination</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 5: HOSPITALITY ECOSYSTEM -->
+      <section style="background-image: linear-gradient(rgba(15, 15, 30, 0.6), rgba(15, 15, 30, 0.6)), url('assets/page-03.png'); background-size: 150%; background-position: calc(50% + 5cm) calc(85% + 1cm);">
+        <h2>Hospitality Ecosystem</h2>
+        <div style="display: flex; gap: 3em; align-items: flex-start; margin-top: 2.5em; flex-wrap: wrap; justify-content: center;">
+          <div style="background: rgba(201, 168, 76, 0.1); padding: 1.5em; border-left: 3px solid var(--gold); border-radius: 4px; flex: 1; min-width: 300px;">
+            <h4 style="color: var(--gold); font-size: 1.2em; margin-bottom: 1em;">Accommodation</h4>
+            <p style="font-size: 0.95em; line-height: 2;">The 1898 Niseko · Kutchan Station Hotel · 1308</p>
+          </div>
+          <div style="background: rgba(201, 168, 76, 0.1); padding: 1.5em; border-left: 3px solid var(--gold); border-radius: 4px; flex: 1; min-width: 300px;">
+            <h4 style="color: var(--gold); font-size: 1.2em; margin-bottom: 1em;">Food and Beverages</h4>
+            <p style="font-size: 0.95em; line-height: 1.8;"><span class="emphasis">MOMENT</span> · <span class="emphasis">kaBARyama</span> · <span class="emphasis">Yoteizanka</span> · <span class="emphasis">Wagyu Tsubaki</span> · <span class="emphasis">Wagyu Tsubaki Bekkan</span></p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 6: REALTY & CONSULTANCY -->
+      <section style="background-image: linear-gradient(rgba(15, 15, 30, 0.6), rgba(15, 15, 30, 0.6)), url('assets/page-04.png'); background-size: 150%; background-position: calc(50% - 13cm) calc(50% + 1cm);">
+        <h2>Realty & Consultancy</h2>
+        <div class="grid-3" style="margin-top: 2.5em;">
+          <div>
+            <h4>Yoteizanka Fudosan</h4>
+            <p>Strategic sales of AID Japan's proprietary real estate developments, serving discerning investors worldwide.</p>
+          </div>
+          <div>
+            <h4>AIDJ Consultancy</h4>
+            <p>Full-service development consulting: construction management, real estate advisory, shop opening.</p>
+          </div>
+          <div>
+            <h4>Services</h4>
+            <p>Strategic expansion, property management, investment advisory, and hospitality consulting across Niseko.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- SLIDE 7: SECTION BREAK - 95% AI -->
+      <section style="background-image: linear-gradient(rgba(15, 15, 30, 0.6), rgba(15, 15, 30, 0.6)), url('assets/1898-niseko.jpg'); background-size: cover; background-position: center;">
+        <h2 style="font-size: 3em;">The AI Native Economy</h2>
+        <p style="margin-top: 2em; font-size: 1.3em;">Introducing <span class="emphasis">Samantha</span></p>
+      </section>
+
+      <!-- SLIDE 8: THE SAMANTHA EXPERIENCE -->
+      <section style="background-image: linear-gradient(rgba(15, 15, 30, 0.7), rgba(15, 15, 30, 0.7)), url('assets/image-2-1.png'); background-size: cover; background-position: center; font-size: 0.80em;">
+        <h2 style="font-size: 2em; margin-bottom: 1.5em;">The Samantha Experience</h2>
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5em; max-width: 1300px; margin: 0 auto; padding: 0 1.5em;">
+
+          <!-- Column 1: The Problem -->
+          <div style="background: rgba(26, 26, 46, 0.9); padding: 1.5em; border-radius: 6px; border-top: 3px solid var(--gold);">
+            <h3 style="color: var(--gold); font-size: 1em; margin-bottom: 1em; text-align: center;">The Problem</h3>
+            <div style="font-size: 0.95em; line-height: 1.6;">
+              <p style="margin-bottom: 0.8em;"><span class="emphasis">Reality:</span><br>3M visitors · 80% intl</p>
+              <p style="margin-bottom: 0.8em;"><span class="emphasis">Trap:</span><br>47 tabs · Language · Disconnected</p>
+              <p style="font-style: italic; color: var(--gold); margin-bottom: 0; font-size: 0.9em;">"Problem isn't supply. It's access."</p>
+            </div>
+          </div>
+
+          <!-- Column 2: One Conversation -->
+          <div style="background: rgba(26, 26, 46, 0.9); padding: 1.5em; border-radius: 6px; border-top: 3px solid var(--gold);">
+            <h3 style="color: var(--gold); font-size: 1em; margin-bottom: 1em; text-align: center;">One Conversation</h3>
+            <div style="font-size: 0.95em; line-height: 1.6;">
+              <p style="margin-bottom: 0.8em;"><span class="emphasis">Guest:</span><br><em>Fam of 4, skiing, need lessons + dinner</em></p>
+              <p style="margin-bottom: 0.8em;"><span class="emphasis">Response:</span><br>Lessons ✓ · Dinner ✓ · Shuttle ✓</p>
+              <p style="color: var(--gold); font-weight: 600; margin-bottom: 0; font-size: 0.9em;">90 sec · One tap</p>
+            </div>
+          </div>
+
+          <!-- Column 3: Proactive Intelligence -->
+          <div style="background: rgba(26, 26, 46, 0.9); padding: 1.5em; border-radius: 6px; border-top: 3px solid var(--gold);">
+            <h3 style="color: var(--gold); font-size: 1em; margin-bottom: 1em; text-align: center;">Proactive Intelligence</h3>
+            <div style="font-size: 0.95em; line-height: 1.6;">
+              <p style="margin-bottom: 0.8em;"><span class="emphasis">Anticipates:</span></p>
+              <p style="margin-bottom: 0.8em; font-style: italic; font-size: 0.9em;">"40cm powder. Tour free 1pm. Reschedule?"</p>
+              <p style="color: var(--gold); margin-bottom: 0; font-size: 0.9em;">Hospitality + intelligence</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SLIDE 9: ONE ECOSYSTEM, TWO HORIZONS -->
+      <section style="background-image: linear-gradient(rgba(15, 15, 30, 0.6), rgba(15, 15, 30, 0.6)), url('assets/image-9-1.png'); background-size: cover; background-position: center;">
+        <h2>One Ecosystem, Two Horizons</h2>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3em; margin-top: 2.5em; max-width: 1100px; margin-left: auto; margin-right: auto; padding: 0 2em;">
+          <div style="background: rgba(26, 26, 46, 0.85); padding: 2.5em; border-radius: 8px; border-left: 4px solid var(--gold);">
+            <h3 style="color: var(--gold); font-size: 1.2em; margin-bottom: 1.5em;">Niseko Businesses</h3>
+            <p style="margin-bottom: 1em; font-size: 0.95em;"><span class="emphasis">Real Estate, Hospitality, F&B, Realty</span></p>
+            <p style="font-size: 0.95em; line-height: 1.6;">Foundation & proof-of-concept. Asset-based operational model.</p>
+          </div>
+          <div style="background: rgba(26, 26, 46, 0.85); padding: 2.5em; border-radius: 8px; border-left: 4px solid var(--gold);">
+            <h3 style="color: var(--gold); font-size: 1.2em; margin-bottom: 1.5em;">AI Ventures</h3>
+            <p style="margin-bottom: 1em; font-size: 0.95em;"><span class="emphasis">Samantha · Yamato</span></p>
+            <p style="font-size: 0.95em; line-height: 1.6;">95% of future growth. Platform, SaaS, AI-native.</p>
+          </div>
+        </div>
+        <p style="text-align: center; margin-top: 2em; font-size: 0.95em;"><span class="emphasis">Physical assets validate AI · AI unlocks new revenue</span></p>
+      </section>
+
+      <!-- SLIDE 10: YAMATO — AI FILM STUDIO -->
+      <section style="background: linear-gradient(135deg, rgba(15, 15, 30, 0.8) 0%, rgba(22, 33, 62, 0.8) 100%); font-size: 0.78em;">
+        <h2 style="font-size: 2em; margin-bottom: 1.5em;">Yamato — AI Film Studio</h2>
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5em; max-width: 1300px; margin: 0 auto; padding: 0 1.5em;">
+
+          <!-- Column 1: The Problem -->
+          <div style="background: rgba(26, 26, 46, 0.9); padding: 1.5em; border-radius: 6px; border-top: 3px solid var(--gold);">
+            <h3 style="color: var(--gold); font-size: 0.95em; margin-bottom: 1em; text-align: center;">The Problem</h3>
+            <div style="font-size: 0.90em; line-height: 1.6;">
+              <p style="margin-bottom: 0.8em;"><span class="emphasis">4.2B</span> consume video daily</p>
+              <p style="margin-bottom: 0.8em;"><span class="emphasis">&lt;1%</span> create professional content</p>
+              <p style="margin-bottom: 0.8em; font-style: italic; font-size: 0.85em;">"AI will craft Hollywood-quality films from story ideas."</p>
+              <p style="margin-bottom: 0; font-size: 0.85em;">— Ashton Kutcher</p>
+            </div>
+          </div>
+
+          <!-- Column 2: The Technology -->
+          <div style="background: rgba(26, 26, 46, 0.9); padding: 1.5em; border-radius: 6px; border-top: 3px solid var(--gold);">
+            <h3 style="color: var(--gold); font-size: 0.95em; margin-bottom: 1em; text-align: center;">The Technology</h3>
+            <div style="font-size: 0.90em; line-height: 1.6;">
+              <p style="margin-bottom: 0.5em;"><span class="emphasis">Story → Script</span> NLP engine</p>
+              <p style="margin-bottom: 0.5em;"><span class="emphasis">Character Continuity</span> AI over 30+ min</p>
+              <p style="margin-bottom: 0.5em;"><span class="emphasis">Actor Profiles</span> persistent digital actors</p>
+              <p style="margin-bottom: 0.8em;"><span class="emphasis">Auto-Editor</span> timeline + color + audio</p>
+              <p style="margin-bottom: 0; font-size: 0.80em;">✓ 10-min film generated end-to-end<br>✓ 350+ alpha tests · 4.6/5 rating</p>
+            </div>
+          </div>
+
+          <!-- Column 3: The Market -->
+          <div style="background: rgba(26, 26, 46, 0.9); padding: 1.5em; border-radius: 6px; border-top: 3px solid var(--gold);">
+            <h3 style="color: var(--gold); font-size: 0.95em; margin-bottom: 1em; text-align: center;">The Market</h3>
+            <div style="font-size: 0.90em; line-height: 1.6;">
+              <p style="margin-bottom: 0.8em;"><span class="emphasis">$47B</span> TAM</p>
+              <p style="margin-bottom: 0.8em;">Ads, creators, SMBs, education</p>
+              <p style="margin-bottom: 0.8em;">50M+ customers</p>
+              <p style="color: var(--gold); font-weight: 600; margin-bottom: 0; font-size: 0.80em;">Seeking $25M seed<br>→ US$1.5B–$2.5B valuation</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SLIDE 11: YAMATO ANIME — STORYTELLING FOR EVERYONE -->
+      <section style="background: linear-gradient(135deg, rgba(15, 15, 30, 0.8) 0%, rgba(22, 33, 62, 0.8) 100%); font-size: 0.78em;">
+        <h2 style="font-size: 2em; margin-bottom: 1.5em;">Yamato Anime — Storytelling for Everyone</h2>
+        <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5em; max-width: 1300px; margin: 0 auto; padding: 0 1.5em;">
+
+          <!-- Column 1: The Problem -->
+          <div style="background: rgba(26, 26, 46, 0.9); padding: 1.5em; border-radius: 6px; border-top: 3px solid var(--gold);">
+            <h3 style="color: var(--gold); font-size: 0.95em; margin-bottom: 1em; text-align: center;">The Problem</h3>
+            <div style="font-size: 0.90em; line-height: 1.6;">
+              <p style="margin-bottom: 0.8em;">Japan has world-class storytellers who cannot afford anime production</p>
+              <p style="margin-bottom: 0.8em;">Traditional anime costs millions per episode</p>
+              <p style="margin-bottom: 0; font-style: italic; font-size: 0.85em;">Creative IP stays locked in books / YouTube — no visual medium</p>
+            </div>
+          </div>
+
+          <!-- Column 2: The Solution -->
+          <div style="background: rgba(26, 26, 46, 0.9); padding: 1.5em; border-radius: 6px; border-top: 3px solid var(--gold);">
+            <h3 style="color: var(--gold); font-size: 0.95em; margin-bottom: 1em; text-align: center;">The Solution</h3>
+            <div style="font-size: 0.90em; line-height: 1.6;">
+              <p style="margin-bottom: 0.5em;">Same Yamato AI engine, optimised for anime style</p>
+              <p style="margin-bottom: 0.5em;"><span class="emphasis">$1 per minute</span> production cost</p>
+              <p style="margin-bottom: 0.5em;">Authors retain full creative control</p>
+              <p style="margin-bottom: 0; font-weight: 600; color: var(--gold);">Story → anime in days, not years</p>
+            </div>
+          </div>
+
+          <!-- Column 3: Success Story: Uketsu -->
+          <div style="background: rgba(26, 26, 46, 0.9); padding: 1.5em; border-radius: 6px; border-top: 3px solid var(--gold);">
+            <h3 style="color: var(--gold); font-size: 0.95em; margin-bottom: 1em; text-align: center;">Success Story: Uketsu</h3>
+            <div style="font-size: 0.90em; line-height: 1.6;">
+              <p style="margin-bottom: 0.8em;">YouTube verbal storytelling channel → millions of views</p>
+              <p style="margin-bottom: 0.8em;">Futabasha published his stories as books</p>
+              <p style="margin-bottom: 0.8em;">Sony picked up for film production</p>
+              <p style="margin-bottom: 0; color: var(--gold); font-weight: 600; font-size: 0.85em;">With Yamato: makes own anime → earlier visibility + full creative ownership</p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- SLIDE 12: THE ROAD AHEAD -->
+      <section style="background-image: linear-gradient(rgba(15, 15, 30, 0.6), rgba(15, 15, 30, 0.6)), url('assets/1898-niseko.jpg'); background-size: cover; background-position: center;">
+        <h2 style="margin-bottom: 1.5em;">The Road Ahead</h2>
+        <div style="max-width: 1200px; margin: 0 auto;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1.5em; margin-bottom: 2em;">
+            <div style="background: rgba(26, 26, 46, 0.85); padding: 1.5em; border-radius: 8px; border-left: 3px solid var(--gold);">
+              <h4 style="color: var(--gold); font-size: 0.9em; margin-bottom: 1em;">Samantha</h4>
+              <p style="font-size: 0.85em; margin-bottom: 0.6em;"><span class="emphasis">Launch:</span> winter 2026–27</p>
+              <p style="font-size: 0.85em; margin-bottom: 0.6em;"><span class="emphasis">Expansion:</span> 50+ destinations</p>
+              <p style="font-size: 0.85em; margin-bottom: 0;"><span class="emphasis">Valuation:</span> US$1B by Year 3</p>
+            </div>
+            <div style="background: rgba(26, 26, 46, 0.85); padding: 1.5em; border-radius: 8px; border-left: 3px solid var(--gold);">
+              <h4 style="color: var(--gold); font-size: 0.9em; margin-bottom: 1em;">Yamato</h4>
+              <p style="font-size: 0.85em; margin-bottom: 0.6em;"><span class="emphasis">Beta:</span> 26 weeks</p>
+              <p style="font-size: 0.85em; margin-bottom: 0.6em;"><span class="emphasis">Monetization:</span> within 26 weeks</p>
+              <p style="font-size: 0.85em; margin-bottom: 0;"><span class="emphasis">Valuation:</span> US$1.5B–$2.5B</p>
+            </div>
+            <div style="background: rgba(26, 26, 46, 0.85); padding: 1.5em; border-radius: 8px; border-left: 3px solid var(--gold);">
+              <h4 style="color: var(--gold); font-size: 0.9em; margin-bottom: 1em;">Foundation</h4>
+              <p style="font-size: 0.85em; margin-bottom: 0.6em;"><span class="emphasis">Roomboss:</span> 100% coverage</p>
+              <p style="font-size: 0.85em; margin-bottom: 0.6em;"><span class="emphasis">Investment:</span> $15M + acquisition</p>
+              <p style="font-size: 0.85em; margin-bottom: 0;"><span class="emphasis">Timeline:</span> 3 years</p>
+            </div>
+          </div>
+          <div style="background: rgba(201, 168, 76, 0.15); padding: 2em; border-left: 4px solid var(--gold); border-radius: 8px; text-align: center;">
+            <p style="font-style: italic; font-size: 1em; margin-bottom: 0; line-height: 1.7;">"This is Niseko. The world's first AI-native economy. Where every visitor gets a local's experience. Where every business reaches the world."</p>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- Reveal.js JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/notes/notes.min.js"></script>
+  <script>
+    Reveal.initialize({
+      hash: true,
+      transition: 'fade',
+      backgroundTransition: 'fade',
+      width: 1920,
+      height: 1080,
+      margin: 0.1,
+      minScale: 0.5,
+      maxScale: 3.0,
+      plugins: [ RevealNotes ]
+    });
+  </script>
+</body>
+</html>
